@@ -1,3 +1,10 @@
+## Notes from the 'Eintstein Network Project Engineer
+The goal of the project is simple. It is focused on developing a way to map and visualize the people Albert Einstein knew and the people who knew those people and so on. The usage of this project is licensed under GPLv3. That being stated, the code that built it is as follows below. Enjoy!
+
+
+
+
+
 [![MEAN.JS Logo](http://meanjs.org/img/logo-small.png)](http://meanjs.org/)
 
 [![Build Status](https://travis-ci.org/meanjs/mean.svg?branch=master)](https://travis-ci.org/meanjs/mean)
