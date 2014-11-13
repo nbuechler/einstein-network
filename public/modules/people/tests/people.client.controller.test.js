@@ -54,8 +54,9 @@
 			// Create sample Person using the People service
 			var samplePerson = new People({
 				name: 'New Person',
+                pob: 'Columbia, MD',
                 dob: '11/11/45',
-                pob: 'Columbia, MD'
+                dod: '11/11/45'
 			});
 
 			// Create a sample People array that includes the new Person
@@ -76,8 +77,9 @@
 			// Define a sample Person object
 			var samplePerson = new People({
 				name: 'New Person',
+                pob: 'Columbia, MD',
                 dob: '11/11/45',
-                pob: 'Columbia, MD'
+                dod: '11/11/45'
 			});
 
 			// Set the URL parameter
@@ -98,22 +100,25 @@
 			// Create a sample Person object
 			var samplePersonPostData = new People({
 				name: 'New Person',
+                pob: 'Columbia, MD',
                 dob: '11/11/45',
-                pob: 'Columbia, MD'
+                dod: '11/11/45'
 			});
 
 			// Create a sample Person response
 			var samplePersonResponse = new People({
 				_id: '525cf20451979dea2c000001',
 				name: 'New Person',
+                pob: 'Columbia, MD',
                 dob: '11/11/45',
-                pob: 'Columbia, MD'
+                dod: '11/11/45'
 			});
 
 			// Fixture mock form input values
 			scope.name = 'New Person';
-            scope.dob = '11/11/45';
             scope.pob = 'Columbia, MD';
+            scope.dob = '11/11/45';
+            scope.dod = '11/11/45';
 
 			// Set POST response
 			$httpBackend.expectPOST('people', samplePersonPostData).respond(samplePersonResponse);
@@ -134,8 +139,9 @@
 			var samplePersonPutData = new People({
 				_id: '525cf20451979dea2c000001',
 				name: 'New Person',
+                pob: 'Columbia, MD',
                 dob: '11/11/45',
-                pob: 'Columbia, MD'
+                dod: '11/11/45'
 			});
 
 			// Mock Person in scope

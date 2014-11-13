@@ -3,6 +3,7 @@
 		<h1 data-ng-bind="person.name"></h1>
         <p data-ng-bind="person.pob"></p>
         <p data-ng-bind="person.dob"></p>
+        <p data-ng-bind="person.dod"></p>
 	</div>
 	<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == person.user._id))">
 		<a class="btn btn-primary" href="/#!/people/{{person._id}}/edit">

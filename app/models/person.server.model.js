@@ -13,7 +13,7 @@ var PersonSchema = new Schema({
 	name: {
 		type: String,
 		default: '',
-		required: 'Please fill Person name',
+		required: 'Please fill Person Name',
 		trim: true
 	},
     pob: {
@@ -27,6 +27,13 @@ var PersonSchema = new Schema({
 		type: String,
 		default: '',
 		required: 'Please fill Person Date of Birth',
+		trim: true
+	},
+    
+    dod: {
+		type: String,
+		default: '',
+		required: 'Please fill Person Date of Death',
 		trim: true
 	},
     

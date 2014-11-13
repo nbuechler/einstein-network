@@ -11,7 +11,8 @@ angular.module('people').controller('PeopleController', ['$scope', '$stateParams
 			var person = new People ({
 				name: this.name,
                 pob: this.pob,
-                dob: this.dob
+                dob: this.dob,
+                dod: this.dod
 			});
 
 			// Redirect after save

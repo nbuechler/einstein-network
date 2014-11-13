@@ -30,8 +30,9 @@ describe('Person Model Unit Tests:', function() {
 		user.save(function() { 
 			person = new Person({
 				name: 'Person Name',
-                dob: '11/11/45',
                 pob: 'Columbia, MD',
+                dob: '11/11/45',
+                dod: '11/11/45',
 				user: user
 			});
 
@@ -49,6 +50,33 @@ describe('Person Model Unit Tests:', function() {
 
 		it('should be able to show an error when try to save without name', function(done) { 
 			person.name = '';
+
+			return person.save(function(err) {
+				should.exist(err);
+				done();
+			});
+		});
+        
+        it('should be able to show an error when try to save without pob', function(done) { 
+			person.pob = '';
+
+			return person.save(function(err) {
+				should.exist(err);
+				done();
+			});
+		});
+        
+        it('should be able to show an error when try to save without dob', function(done) { 
+			person.dob = '';
+
+			return person.save(function(err) {
+				should.exist(err);
+				done();
+			});
+		});
+        
+        it('should be able to show an error when try to save without dod', function(done) { 
+			person.dod = '';
 
 			return person.save(function(err) {
 				should.exist(err);

@@ -11,6 +11,9 @@
 				<span data-ng-bind="person.user.displayName"></span>
 			</small>
 			<h4 class="list-group-item-heading" data-ng-bind="person.name"></h4>
+            <p class="list-group-item-heading" data-ng-bind="person.pob"></p>
+            <p class="list-group-item-heading" data-ng-bind="person.dob"></p>
+            <p class="list-group-item-heading" data-ng-bind="person.dod"></p>
         </a>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!people.$resolved || people.length">
