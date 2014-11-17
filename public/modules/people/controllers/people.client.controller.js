@@ -9,7 +9,9 @@ angular.module('people').controller('PeopleController', ['$scope', '$stateParams
 		$scope.create = function() {
 			// Create new Person object
 			var person = new People ({
-				name: this.name,
+				fname: this.fname,
+                mname: this.mname,
+                lname: this.lname,
                 pob: this.pob,
                 dob: this.dob,
                 dod: this.dod

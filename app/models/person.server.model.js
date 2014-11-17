@@ -10,10 +10,22 @@ var mongoose = require('mongoose'),
  * Person Schema
  */
 var PersonSchema = new Schema({
-	name: {
+	fname: {
 		type: String,
 		default: '',
-		required: 'Please fill Person Name',
+		required: 'Please fill Person First Name',
+		trim: true
+	},
+    mname: {
+		type: String,
+		default: '',
+		required: 'Please fill Person Middle Name',
+		trim: true
+	},
+    lname: {
+		type: String,
+		default: '',
+		required: 'Please fill Person Last Name',
 		trim: true
 	},
     pob: {

@@ -53,7 +53,9 @@
 		it('$scope.find() should create an array with at least one Person object fetched from XHR', inject(function(People) {
 			// Create sample Person using the People service
 			var samplePerson = new People({
-				name: 'New Person',
+				fname: 'New',
+                mname: 'Kind',
+                lname: 'Person',
                 pob: 'Columbia, MD',
                 dob: '11/11/45',
                 dod: '11/11/45'
@@ -76,7 +78,9 @@
 		it('$scope.findOne() should create an array with one Person object fetched from XHR using a personId URL parameter', inject(function(People) {
 			// Define a sample Person object
 			var samplePerson = new People({
-				name: 'New Person',
+				fname: 'New',
+                mname: 'Kind',
+                lname: 'Person',
                 pob: 'Columbia, MD',
                 dob: '11/11/45',
                 dod: '11/11/45'
@@ -99,7 +103,9 @@
 		it('$scope.create() with valid form data should send a POST request with the form input values and then locate to new object URL', inject(function(People) {
 			// Create a sample Person object
 			var samplePersonPostData = new People({
-				name: 'New Person',
+				fname: 'New',
+                mname: 'Kind',
+                lname: 'Person',
                 pob: 'Columbia, MD',
                 dob: '11/11/45',
                 dod: '11/11/45'
@@ -108,14 +114,18 @@
 			// Create a sample Person response
 			var samplePersonResponse = new People({
 				_id: '525cf20451979dea2c000001',
-				name: 'New Person',
+				fname: 'New',
+                mname: 'Kind',
+                lname: 'Person',
                 pob: 'Columbia, MD',
                 dob: '11/11/45',
                 dod: '11/11/45'
 			});
 
 			// Fixture mock form input values
-			scope.name = 'New Person';
+			scope.fname = 'New';
+            scope.mname = 'Kind';
+            scope.lname = 'Person';
             scope.pob = 'Columbia, MD';
             scope.dob = '11/11/45';
             scope.dod = '11/11/45';
@@ -138,7 +148,9 @@
 			// Define a sample Person put data
 			var samplePersonPutData = new People({
 				_id: '525cf20451979dea2c000001',
-				name: 'New Person',
+				fname: 'New',
+                mname: 'Kind',
+                lname: 'Person',
                 pob: 'Columbia, MD',
                 dob: '11/11/45',
                 dod: '11/11/45'

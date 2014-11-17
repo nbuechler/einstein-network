@@ -5,39 +5,71 @@
     <div class="col-md-12">
         <form class="form-horizontal" data-ng-submit="create()" novalidate>
             <fieldset>
-                <div class="form-group">
-                    <label class="control-label" for="name">Name</label>
-                    <div class="controls">
-                        <input type="text" data-ng-model="name" id="name" class="form-control" placeholder="Name" required>
+                <div class="row">
+                    <div data-ng-show="error" class="text-danger pull-right">
+                        <strong data-ng-bind="error"></strong>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label" for="pob">Place of Birth</label>
-                    <div class="controls">
-                        <input type="text" data-ng-model="pob" id="pob" class="form-control" placeholder="Place of Birth" required>
+                    <div data-ng-hide="error" class="text-info pull-right">
+                        <strong>Please complete the entire form</strong>
                     </div>
                 </div>
                 
-                <div class="form-group">
-                    <label class="control-label" for="dob">Date of Birth</label>
-                    <div class="controls">
-                        <input type="text" data-ng-model="dob" id="dob" class="form-control" placeholder="Date of Birth" required>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group" style="margin: 0;">
+                            <label class="control-label" for="fname">First Name</label>
+                            <div class="controls">
+                                <input type="text" data-ng-model="fname" id="fname" class="form-control" placeholder="First Name" required>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="form-group">
-                    <label class="control-label" for="dod">Date of Death</label>
-                    <div class="controls">
-                        <input type="text" data-ng-model="dod" id="dod" class="form-control" placeholder="Date of Death" required>
+                    <div class="col-md-4">
+                        <div class="form-group" style="margin: 0;">
+                            <label class="control-label" for="mname">Middle Name</label>
+                            <div class="controls">
+                                <input type="text" data-ng-model="mname" id="mname" class="form-control" placeholder="Middle Name" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group" style="margin: 0;">
+                            <label class="control-label" for="lname">Last Name</label>
+                            <div class="controls">
+                                <input type="text" data-ng-model="lname" id="lname" class="form-control" placeholder="Last Name" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group" style="margin: 0;">
+                            <label class="control-label" for="pob">Place of Birth</label>
+                            <div class="controls">
+                                <input type="text" data-ng-model="pob" id="pob" class="form-control" placeholder="Place of Birth" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group" style="margin: 0;">
+                            <label class="control-label" for="dob">Date of Birth</label>
+                            <div class="controls">
+                                <input type="text" data-ng-model="dob" id="dob" class="form-control" placeholder="Date of Birth" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group" style="margin: 0;">
+                            <label class="control-label" for="dod">Date of Death</label>
+                            <div class="controls">
+                                <input type="text" data-ng-model="dod" id="dod" class="form-control" placeholder="Date of Death" required>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <input type="submit" class="btn btn-default">
+                <div class="form-group pull-right" style="padding: 10px;" >
+                    <input type="submit" value="Submit" class="btn btn-default">
                 </div>
-				<div data-ng-show="error" class="text-danger">
-					<strong data-ng-bind="error"></strong>
-				</div>
             </fieldset>
         </form>
     </div>

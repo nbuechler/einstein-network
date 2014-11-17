@@ -29,7 +29,9 @@ describe('Person Model Unit Tests:', function() {
 
 		user.save(function() { 
 			person = new Person({
-				name: 'Person Name',
+				fname: 'New',
+                mname: 'Kind',
+                lname: 'Person',
                 pob: 'Columbia, MD',
                 dob: '11/11/45',
                 dod: '11/11/45',
@@ -48,8 +50,26 @@ describe('Person Model Unit Tests:', function() {
 			});
 		});
 
-		it('should be able to show an error when try to save without name', function(done) { 
-			person.name = '';
+        it('should be able to show an error when try to save without first name', function(done) { 
+			person.fname = '';
+
+			return person.save(function(err) {
+				should.exist(err);
+				done();
+			});
+		});
+        
+        it('should be able to show an error when try to save without middle name', function(done) { 
+			person.mname = '';
+
+			return person.save(function(err) {
+				should.exist(err);
+				done();
+			});
+		});
+        
+		it('should be able to show an error when try to save without last name', function(done) { 
+			person.lname = '';
 
 			return person.save(function(err) {
 				should.exist(err);

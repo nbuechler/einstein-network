@@ -4,16 +4,14 @@
     </div>
     <div class="list-group">
         <a data-ng-repeat="person in people" data-ng-href="#!/people/{{person._id}}" class="list-group-item">
-			<small class="list-group-item-text">
+			<small class="list-group-item-text pull-right">
 				Posted on
 				<span data-ng-bind="person.created | date:'medium'"></span>
 				by
 				<span data-ng-bind="person.user.displayName"></span>
 			</small>
-			<h4 class="list-group-item-heading" data-ng-bind="person.name"></h4>
-            <p class="list-group-item-heading" data-ng-bind="person.pob"></p>
-            <p class="list-group-item-heading" data-ng-bind="person.dob"></p>
-            <p class="list-group-item-heading" data-ng-bind="person.dod"></p>
+			<h4 class="list-group-item-heading" data-ng-bind="person.fname + ' ' + person.mname + ' ' + person.lname"></h4>
+            <p class="list-group-item-heading" data-ng-bind="'Born in ' + person.pob + ', ' + person.lname + ' lived from ' + person.dob + ' until ' + person.dod + '.'"></p>
         </a>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!people.$resolved || people.length">
