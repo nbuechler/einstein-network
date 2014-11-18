@@ -2,7 +2,48 @@
 	<div class="page-header">
 		<h1 data-ng-bind="person.fname + ' ' + person.mname + ' ' + person.lname"></h1>
         <p data-ng-bind="'Born in ' + person.pob + ', ' + person.lname + ' lived from ' + person.dob + ' until ' + person.dod + '.'"></p>
-	</div>
+        <div>
+            <h4>Published Works (if any)</h4>
+            <ol>
+                <li ng-hide="pw === ''" ng-repeat="pw in person.publishedWorks">{{pw}}</li>
+            </ol>
+        </div>
+        
+        <div>
+            <h4>Well-known Milestones (if any)</h4>
+            <ol>
+                <li ng-hide="wkm === ''" ng-repeat="wkm in person.wellKnownMilestones">{{wkm}}</li>
+            </ol>
+        </div>
+        
+        <div>
+            <h4>Creative Movements Founded (if any)</h4>
+            <ol>
+                <li ng-hide="cmf === ''" ng-repeat="cmf in person.creativeMovementsFounded">{{cmf}}</li>
+            </ol>
+        </div>
+        
+        <div>
+            <h4>Acclaimed Professions (if any)</h4>
+            <ol>
+                <li ng-hide="ap === ''" ng-repeat="ap in person.acclaimedProfessions">{{ap}}</li>
+            </ol>
+        </div>
+        
+        <div>
+            <h4>Other Notable Works (if any)</h4>
+            <ol>
+                <li ng-hide="nw === ''" ng-repeat="nw in person.notableWorks">{{nw}}</li>
+            </ol>
+        </div>
+        
+        <div>
+            <h4>Places of Residence (if any)</h4>
+            <ol>
+                <li ng-hide="ll === ''" ng-repeat="ll in person.locationsLived">{{ll}}</li>
+            </ol>
+        </div>
+    </div>
 	<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == person.user._id))">
 		<a class="btn btn-primary" href="/#!/people/{{person._id}}/edit">
 			<i class="glyphicon glyphicon-edit"></i>

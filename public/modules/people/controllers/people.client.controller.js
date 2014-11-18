@@ -14,7 +14,13 @@ angular.module('people').controller('PeopleController', ['$scope', '$stateParams
                 lname: this.lname,
                 pob: this.pob,
                 dob: this.dob,
-                dod: this.dod
+                dod: this.dod,
+                publishedWorks: this.publishedWorks,
+                wellKnownMilestones: this.wellKnownMilestones,
+                creativeMovementsFounded: this.creativeMovementsFounded,
+                acclaimedProfessions: this.acclaimedProfessions,
+                notableWorks: this.notableWorks,
+                locationsLived: this.locationsLived
 			});
 
 			// Redirect after save

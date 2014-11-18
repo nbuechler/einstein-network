@@ -48,7 +48,36 @@ var PersonSchema = new Schema({
 		required: 'Please fill Person Date of Death',
 		trim: true
 	},
-    
+    publishedWorks: {
+        type: Array,
+        default: '',
+        trim: true
+    },
+    wellKnownMilestones: {
+        type: Array,
+        default: '',
+        trim: true
+    },
+    creativeMovementsFounded: {
+        type: Array,
+        default: '',
+        trim: true
+    },
+    acclaimedProfessions: {
+        type: Array,
+        default: '',
+        trim: true
+    },
+    notableWorks: {
+        type: Array,
+        default: '',
+        trim: true
+    },
+    locationsLived: {
+        type: Array,
+        default: '',
+        trim: true
+    },
 	created: {
 		type: Date,
 		default: Date.now
