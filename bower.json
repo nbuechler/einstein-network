@@ -1,18 +1,22 @@
 {
-	"name": "einstein-network-project",
-	"version": "0.0.1",
-	"description": "(Full-Statck JavaScript with MongoDB, Express, AngularJS, and Node.js with D3.js for visualization)",
-	"dependencies": {
-		"bootstrap": "~3",
-		"angular": "~1.2",
-		"angular-resource": "~1.2",
-		"angular-mocks": "~1.2",
-		"angular-cookies": "~1.2",
-		"angular-animate": "~1.2",
-		"angular-touch": "~1.2",
-		"angular-sanitize": "~1.2",
-		"angular-bootstrap": "~0.11.2",
-		"angular-ui-utils": "~0.1.1",
-		"angular-ui-router": "~0.2.11"
-	}
+  "name": "einstein-network-project",
+  "version": "0.0.1",
+  "description": "(Full-Statck JavaScript with MongoDB, Express, AngularJS, and Node.js with D3.js for visualization)",
+  "dependencies": {
+    "d3": "~3.4.13"
+  },
+  "homepage": "https://github.com/nbuechler/einstein-network",
+  "authors": [
+    "nbuechler <natebuechler@gmail.com>"
+  ],
+  "license": "GPLv3",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ]
 }
