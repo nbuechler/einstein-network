@@ -1,13 +1,13 @@
 'use strict';
 
 angular.module('people').directive('stickForceViz', [
-	function() {
+    function() {
 		return {
 			template: '<div id="stickForceViz"></div>',
 			restrict: 'E',
 			link: function postLink(scope, element, attrs) {
              
-                console.log(scope);
+                console.log(scope.people);
                 
                 /* jshint ignore:start */
                 
@@ -42,22 +42,35 @@ angular.module('people').directive('stickForceViz', [
                 
                 var graph = {
                   "nodes": [
-                    {"x": 469, "y": 410},
-                    {"x": 493, "y": 364},
-                    {"x": 442, "y": 365},
-                    {"x": 467, "y": 314},
-                    {"x": 477, "y": 248},
-                    {"x": 425, "y": 207},
-                    {"x": 402, "y": 155},
-                    {"x": 369, "y": 196},
-                    {"x": 350, "y": 148},
-                    {"x": 539, "y": 222},
-                    {"x": 594, "y": 235},
-                    {"x": 582, "y": 185},
-                    {"x": 633, "y": 200}
+                    {"x": 0, "y": 0},
+                    {"x": 0, "y": 0},
+                    {"x": 0, "y": 0},
+                    {"x": 0, "y": 0},
+                    {"x": 0, "y": 0},
+                    {"x": 0, "y": 0},
+                    {"x": 0, "y": 0},
+                    {"x": 0, "y": 0},
+                    {"x": 0, "y": 0},
+                    {"x": 0, "y": 0},
+                    {"x": 0, "y": 0},
+                    {"x": 0, "y": 0},
+                    {"x": 0, "y": 0},
+                    {"x": 0, "y": 0},
+                    {"x": 0, "y": 0},
+                    {"x": 0, "y": 0},
+                    {"x": 0, "y": 0}
                   ],
                   "links": [
                     {"source":  0, "target":  1},
+                    {"source":  0, "target":  11},
+                    {"source":  0, "target":  12},
+                    {"source":  0, "target":  13},
+                    {"source":  0, "target":  14},
+                    {"source":  1, "target":  11},
+                    {"source":  1, "target":  12},
+                    {"source":  1, "target":  13},
+                    {"source":  1, "target":  14},
+                    {"source":  2, "target":  11},
                     {"source":  1, "target":  2},
                     {"source":  2, "target":  0},
                     {"source":  1, "target":  3},

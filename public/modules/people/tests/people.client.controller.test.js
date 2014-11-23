@@ -106,6 +106,7 @@
 				fname: 'New',
                 mname: 'Kind',
                 lname: 'Person',
+                nodeNumber: '0',
                 pob: 'Columbia, MD',
                 dob: '11/11/45',
                 dod: '11/11/45'
@@ -117,6 +118,7 @@
 				fname: 'New',
                 mname: 'Kind',
                 lname: 'Person',
+                nodeNumber: '0',
                 pob: 'Columbia, MD',
                 dob: '11/11/45',
                 dod: '11/11/45'
@@ -126,6 +128,7 @@
 			scope.fname = 'New';
             scope.mname = 'Kind';
             scope.lname = 'Person';
+            scope.nodeNumber = '0';
             scope.pob = 'Columbia, MD';
             scope.dob = '11/11/45';
             scope.dod = '11/11/45';
@@ -151,6 +154,7 @@
 				fname: 'New',
                 mname: 'Kind',
                 lname: 'Person',
+                nodeNumber: '0',
                 pob: 'Columbia, MD',
                 dob: '11/11/45',
                 dod: '11/11/45'

@@ -85,7 +85,25 @@ var PersonSchema = new Schema({
 	user: {
 		type: Schema.ObjectId,
 		ref: 'User'
-	}
+	},
+    
+    //Positioning
+    x: {
+        type: Number,
+        default: 0
+    },
+    y: {
+        type: Number,
+        default: 0
+    },
+    
+    //Node Number
+    nodeNumber: {
+        type: String,
+        required: 'Please fill Node Number',
+        default: '',
+        trim: true
+    }
 });
 
 mongoose.model('Person', PersonSchema);

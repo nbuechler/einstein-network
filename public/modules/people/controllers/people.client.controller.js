@@ -5,10 +5,13 @@ angular.module('people').controller('PeopleController', ['$scope', '$stateParams
 	function($scope, $stateParams, $location, Authentication, People) {
 		$scope.authentication = Authentication;
 
+        $scope.greeting = 'Hello there!';
+        
 		// Create new Person
 		$scope.create = function() {
 			// Create new Person object
 			var person = new People ({
+                nodeNumber: this.nodeNumber,
 				fname: this.fname,
                 mname: this.mname,
                 lname: this.lname,
@@ -20,7 +23,9 @@ angular.module('people').controller('PeopleController', ['$scope', '$stateParams
                 creativeMovementsFounded: this.creativeMovementsFounded,
                 acclaimedProfessions: this.acclaimedProfessions,
                 notableWorks: this.notableWorks,
-                locationsLived: this.locationsLived
+                locationsLived: this.locationsLived,
+                x: 0,
+                y: 0
 			});
 
 			// Redirect after save

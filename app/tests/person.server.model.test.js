@@ -35,6 +35,7 @@ describe('Person Model Unit Tests:', function() {
                 pob: 'Columbia, MD',
                 dob: '11/11/45',
                 dod: '11/11/45',
+                nodeNumber: 0,
 				user: user
 			});
 
@@ -97,6 +98,15 @@ describe('Person Model Unit Tests:', function() {
         
         it('should be able to show an error when try to save without dod', function(done) { 
 			person.dod = '';
+
+			return person.save(function(err) {
+				should.exist(err);
+				done();
+			});
+		});
+        
+        it('should be able to show an error when try to save without node number', function(done) { 
+			person.nodeNumber = '';
 
 			return person.save(function(err) {
 				should.exist(err);

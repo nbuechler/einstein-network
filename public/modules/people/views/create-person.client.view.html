@@ -1,16 +1,28 @@
-<section data-ng-controller="PeopleController">
+<section data-ng-controller="PeopleController" data-ng-init="find()">
     <div class="page-header">
         <h1>New Person</h1>
     </div>
     <div class="col-md-12">
         <form class="form-horizontal" data-ng-submit="create()" novalidate>
             <fieldset>
+                
                 <div class="row">
                     <div data-ng-show="error" class="text-danger pull-right">
                         <strong data-ng-bind="error"></strong>
                     </div>
                     <div data-ng-hide="error" class="text-info pull-right">
                         <strong>Please complete the entire form</strong>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-1">
+                        <div class="form-group" style="margin: 0;">
+                            <label class="control-label" for="nodeNumber">Node Number</label>
+                            <div class="controls">
+                                <input type="text" data-ng-model="nodeNumber" id="nodeNumber" class="form-control" placeholder="#" required>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
