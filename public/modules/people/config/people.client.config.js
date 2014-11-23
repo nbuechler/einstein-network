@@ -1,6 +1,6 @@
 'use strict';
 
-// Configuring the Articles module
+// Configuring the People module
 angular.module('people').run(['Menus',
 	function(Menus) {
 		// Set top bar menu items
