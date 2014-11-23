@@ -5,6 +5,10 @@ angular.module('people').config(['$stateProvider',
 	function($stateProvider) {
 		// People state routing
 		$stateProvider.
+		state('visualizePeople', {
+			url: '/people/visualizePeople',
+			templateUrl: 'modules/people/views/visualize-people.client.view.html'
+		}).
 		state('listPeople', {
 			url: '/people',
 			templateUrl: 'modules/people/views/list-people.client.view.html'
