@@ -3,7 +3,8 @@
 // People controller
 angular.module('people').controller('PeopleController', ['$scope', '$stateParams', '$location', 'Authentication', 'People',
 	function($scope, $stateParams, $location, Authentication, People) {
-		$scope.authentication = Authentication;
+		
+        $scope.authentication = Authentication;
 
         $scope.greeting = 'Hello there!';
         
@@ -78,5 +79,7 @@ angular.module('people').controller('PeopleController', ['$scope', '$stateParams
 				personId: $stateParams.personId
 			});
 		};
+        
+        
 	}
 ]);
