@@ -8,11 +8,16 @@ angular.module('people').controller('PeopleController', ['$scope', '$stateParams
 
         $scope.greeting = 'Hello there!';
         
+        $scope.nodes = {};
+        
 		// Create new Person
 		$scope.create = function() {
+            console.log('Started create - peopleCtrl');
 			// Create new Person object
 			var person = new People ({
                 nodeNumber: this.nodeNumber,
+                //nodeNumList: this.nodeNumList,
+                nodeNumList: [$scope.nodes],
 				fname: this.fname,
                 mname: this.mname,
                 lname: this.lname,
@@ -29,6 +34,8 @@ angular.module('people').controller('PeopleController', ['$scope', '$stateParams
                 y: 0
 			});
 
+            console.log(person.nodeNumList);
+            
 			// Redirect after save
 			person.$save(function(response) {
 				$location.path('people/' + response._id);
@@ -59,8 +66,13 @@ angular.module('people').controller('PeopleController', ['$scope', '$stateParams
 
 		// Update existing Person
 		$scope.update = function() {
+            console.log('Started update - peopleCtrl');
 			var person = $scope.person;
-
+            
+            person.nodeNumList = [$scope.nodes];
+            
+            console.log(person.nodeNumList);
+            
 			person.$update(function() {
 				$location.path('people/' + person._id);
 			}, function(errorResponse) {

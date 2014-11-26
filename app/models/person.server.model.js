@@ -103,6 +103,12 @@ var PersonSchema = new Schema({
         required: 'Please fill Node Number',
         default: '',
         trim: true
+    },
+    
+    nodeNumList: {
+        type: Array,
+        default: 'EMPTY',
+        trim: true
     }
 });
 

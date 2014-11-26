@@ -198,7 +198,7 @@
                                             
                                             <h4 class="list-group-item-heading" data-ng-bind="person.fname + ' ' + person.mname + ' ' + person.lname"></h4>
                                             <p class="list-group-item-heading" data-ng-bind="'Node: ' + person.nodeNumber"></p>
-                                            <input type="checkbox" for="foo"></input>
+                                            <input type="checkbox" ng-model="nodes[person.nodeNumber]"></input>
                                         </div>
                                     </div>
                                 
