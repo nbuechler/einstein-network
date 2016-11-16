@@ -7,7 +7,7 @@ A project that attempts visualize the people Albert Einstein knew in a friend-of
 * With the knowledge I have now, I might just start over
 * This project makes use of technologies that were modern at the time -2014-, but now they are quickly becoming obsolete -2016-
 
-## Tech stack via http://meanjs.org/
+# Tech stack via http://meanjs.org/
 Make sure you have installed all these prerequisites on your development machine.
 * Node.js - [Download & Install Node.js](http://www.nodejs.org/download/) and the npm package manager, if you encounter any problems, you can also use this [GitHub Gist](https://gist.github.com/isaacs/579814) to install Node.js.
 * MongoDB - [Download & Install MongoDB](http://www.mongodb.org/downloads), and make sure it's running on the default port (27017).
@@ -20,14 +20,14 @@ $ npm install -g bower
 $ npm install -g grunt-cli
 ```
 
-## Getting started
+# Getting started
 
 Run npm install
 ```
 $ npm install
 ```
 
-## Running Your Application
+# Running Your Application
 Simply run the command for starting grunt
 ```
 $ grunt
